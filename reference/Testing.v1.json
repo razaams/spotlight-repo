@@ -1,0 +1,31 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Testing",
+    "version": "1.0",
+    "description": "Testing api documentation using spotlight.io",
+    "contact": {
+      "name": "Contact Person",
+      "url": "https://contact-us.io"
+    }
+  },
+  "host": "localhost:3000",
+  "schemes": [
+    "http"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "paths": {},
+  "definitions": {},
+  "securityDefinitions": {
+    "apiKey": {
+      "name": "API Key",
+      "type": "apiKey",
+      "in": "header"
+    }
+  }
+}
