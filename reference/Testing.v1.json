@@ -19,7 +19,117 @@
   "consumes": [
     "application/json"
   ],
-  "paths": {},
+  "paths": {
+    "/endpoint-1": {
+      "get": {
+        "summary": "Description of GET request endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": [
+                    "string",
+                    "number"
+                  ]
+                },
+                "message": {
+                  "type": "string",
+                  "example": "success message"
+                }
+              }
+            }
+          },
+          "201": {
+            "description": "Created",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "number"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "type1",
+                    "type2",
+                    "type3",
+                    "type4",
+                    "type5"
+                  ]
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        },
+        "operationId": "get-endpoint-1",
+        "description": "Description of endpoint-1",
+        "parameters": [
+          {
+            "type": "number",
+            "in": "query",
+            "name": "queryparam",
+            "required": true,
+            "description": "query parameter of integer type",
+            "default": 0,
+            "maximum": 200,
+            "exclusiveMaximum": false,
+            "minimum": 0,
+            "multipleOf": 0
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "type1",
+                    "type2",
+                    "type3",
+                    "type4",
+                    "type5"
+                  ]
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            },
+            "description": "request body object"
+          }
+        ]
+      }
+    }
+  },
   "definitions": {},
   "securityDefinitions": {
     "apiKey": {
