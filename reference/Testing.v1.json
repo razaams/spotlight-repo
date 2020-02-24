@@ -130,7 +130,34 @@
       }
     }
   },
-  "definitions": {},
+  "definitions": {
+    "TestModel": {
+      "title": "TestModel",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "type1",
+            "type2",
+            "type3",
+            "type4",
+            "type5"
+          ]
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "description": "Test Model"
+    }
+  },
   "securityDefinitions": {
     "apiKey": {
       "name": "API Key",
